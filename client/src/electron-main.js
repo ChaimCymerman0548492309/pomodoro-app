@@ -1,5 +1,8 @@
-const { app, BrowserWindow } = require('electron')
-const path = require('path')
+import { app, BrowserWindow } from 'electron'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -11,24 +14,22 @@ function createWindow() {
     }
   })
 
-  // טען את האפליקציה בהתאם לסביבה
+  // טען את האפליקציה
   if (process.env.NODE_ENV === 'development') {
     win.loadURL('http://localhost:3000')
+    win.webContents.openDevTools() // פתח DevTools
   } else {
-    win.loadFile(path.join(__dirname, '../build/index.html'))
+    win.loadFile(path.join(__dirname, 'dist', 'index.html'))
   }
+
 }
 
 app.whenReady().then(createWindow)
 
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit()
-  }
+  if (process.platform !== 'darwin') app.quit()
 })
 
 app.on('activate', () => {
-  if (BrowserWindow.getAllWindows().length === 0) {
-    createWindow()
-  }
+  if (BrowserWindow.getAllWindows().length === 0) createWindow()
 })
