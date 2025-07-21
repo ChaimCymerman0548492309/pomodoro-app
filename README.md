@@ -38,7 +38,7 @@ task-manager/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-repo/task-manager.git
+git clone https://github.com/ChaimCymerman0548492309/pomodoro-app
 cd task-manager
 ```
 
@@ -68,7 +68,7 @@ Server will run on `http://localhost:5000`
 cd client
 npm start
 ```
-Client will run on `http://localhost:3000`
+Client will run on `http://localhost:5000`
 
 ## API Endpoints
 
@@ -122,13 +122,7 @@ docker-compose build
 docker-compose up
 ```
 
-## Environment Variables
 
-Create a `.env` file in the server directory:
-```env
-PORT=5000
-DATA_FILE=./data/data.json
-```
 
 ## Known Limitations
 - No user authentication

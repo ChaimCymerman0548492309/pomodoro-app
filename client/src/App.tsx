@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import TaskList from "./TaskList";
-import TaskStats from "./TaskStats";
-import { AppContainer, Header, Nav, NavButton, MainContent } from "./styles";
+import TaskList from "./components/TaskList";
+import TaskStats from "./components/TaskStats";
+import {
+  AppContainer,
+  Header,
+  Nav,
+  NavButton,
+  MainContent,
+} from "./components/styles";
 
 type Task = {
   id: number;
