@@ -39,7 +39,7 @@ task-manager/
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/ChaimCymerman0548492309/pomodoro-app
-cd task-manager
+cd pomodoro-app
 ```
 
 ### 2. Install dependencies
@@ -59,14 +59,14 @@ npm install
 ### Start the backend server
 ```bash
 cd server
-npm start
+npm run dev
 ```
 Server will run on `http://localhost:5000`
 
 ### Start the frontend client
 ```bash
 cd client
-npm start
+npm run dev
 ```
 Client will run on `http://localhost:5000`
 
