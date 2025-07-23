@@ -19,7 +19,10 @@ function createWindow() {
     win.loadURL('http://localhost:3000')
     win.webContents.openDevTools() // פתח DevTools
   } else {
-    win.loadFile(path.join(__dirname, 'dist', 'index.html'))
+    // win.loadFile(path.join(__dirname, 'dist', 'index.html'))
+    win.loadFile(path.join(__dirname, '..', 'dist', 'index.html'))
+    win.webContents.openDevTools() 
+    
   }
 
 }
